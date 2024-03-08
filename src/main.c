@@ -75,14 +75,14 @@ int main(int argc, char** argv){
 
         if(fclose(fp) == EOF){perror("Unable to properly close the file. "); exit(EXIT_FAILURE);}
 
-        int parenthesis_array[file_length];
-        if(generate_prediction_array(instruction_pointer, file_length, parenthesis_array) == -1){/*generate the array used to store parenthesis position*/
+        int prediction_array[file_length];
+        if(generate_prediction_array(instruction_pointer, file_length, prediction_array) == -1){/*generate the array used to store parenthesis position*/
 
             puts("Invalid program.");
             exit(EXIT_FAILURE);
         }
         
-        execute(instruction_pointer, parenthesis_array);/*execute the bf program*/
+        execute(instruction_pointer, prediction_array);/*execute the bf program*/
     }
 
 
