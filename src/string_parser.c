@@ -30,7 +30,7 @@ void execute(char* instruction_pointer, int* prediction_array){
                 if(_debug){printf("read : '<' %d times\n", prediction_array[i]);}
 
                 if(pos - prediction_array[i] >= 0){pos -= prediction_array[i];}
-                else{pos = _size - 1 - (pos - prediction_array[i]);}
+                else{pos = _size - 1 - (prediction_array[i] - pos);}
 
                 i += prediction_array[i];
                 break;
