@@ -21,10 +21,9 @@ interpreter options :
     ./brainfuck <filename.bf> [OPTIONS]
     ./brainfuck (leave blank) to write a string to parse
 
-    (-d OR --_debug) : _debug
-    (-s OR --size) <size> : custom array size [0 - UINT_MAX]
-    (-S OR --string) = "<String>" : parse the string <String> instead of a file
-    (-h OR --help)    
+    -d        : debug
+    -s <size> : custom array size [0 - UINT_MAX]
+    -h        : print help page  
 */
 
 extern bool _debug;
@@ -37,6 +36,7 @@ int main(int argc, char** argv){
 
     if(ret == -1){
 
+        printf("Unrecognized file format. Filename should end in .b or .bf \n");
         exit(EXIT_FAILURE);
     }
 

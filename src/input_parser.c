@@ -26,12 +26,6 @@ int parse_input(int argc, char **argv, char** filename){
 
     int ret = parse_filename(argc, argv);
 
-    if(ret == -1){
-
-        printf("Unrecognized file format. Filename should end in .b or .bf \n");
-        return -1;/*error code*/
-    }
-
     *filename = *(argv + ret);/*once i have the filename i save it. The function getopt modifies argv values*/
 
     while((opt = getopt(argc, argv, "dhns:")) != -1){
@@ -76,7 +70,7 @@ int parse_filename(int argc, char** argv){
     allowed extension : .b, .bf*/
 
     char* ptr;
-    for(int i = 1; i < argc; i++){ /*cycle through every arguments to find the filename. (skip the first iteration since that is the executed program name, hence "brainfuck")*/
+    for(int i = 1; i < argc; i++){ /*iterates through every arguments to find the filename. (skip the first iteration since that is the executed program name, hence "brainfuck")*/
 
         ptr = *(argv + i);
 
