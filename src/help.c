@@ -2,7 +2,7 @@
 
 void help(){
 
-    puts("\n\nUsage : brainfuck [OPTIONS] [file]\n");
+    puts("\n\nUsage : brainfuck [OPTIONS] <file>\n");
     puts("Options : \n");
     puts(" -d \t\t Enable debug mode");
     puts(" -h \t\t Display (this) help page");

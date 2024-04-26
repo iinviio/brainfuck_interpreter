@@ -3,8 +3,7 @@
 
 /*interpreter options :
 
-    ./brainfuck <filename.bf> [OPTIONS]
-    ./brainfuck (leave blank) to write a string to parse
+    ./brainfuck [OPTIONS] <filename.bf>
 
     (-d OR --debug) : debug
     (-s OR --size) <size> : custom array size [0 - UINT_MAX]
